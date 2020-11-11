@@ -4,4 +4,5 @@ GIT für alle Programmieraufgaben für das Portfolio in Webprogrammierung von An
 Aufgabe 1c: Screenshot_Postman
 
 Aufgabe 2b: index_muster
+
 Aufgabe 2c: style_muster
