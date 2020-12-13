@@ -8,3 +8,5 @@ Aufgabe 2b: index_muster
 Aufgabe 2c: style_muster
 
 Aufgabe 3b: Bootstrap_Desktop & Bootstrap_Smartphone
+
+Aufgabe 4a: SinglePageApp Ordner
