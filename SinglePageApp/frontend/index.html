@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Der Bootstrap Rechner</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="/static/css/index.css"> <!--Verweis auf Styling-Datei-->
+
+		<link rel="stylesheet" href="/static/bootstrap/css/Bootstrap.min.css"> <!--Implementierung von Bootstrap-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Verwendung von Font-Awesome Icons-->
+	</head>
+
+	<body>
+		<script src="/static/bootstrap/jquery-3.5.1.min.js"></script> <!--Implementierung von Bootstrap-->
+		<script src="/static/bootstrap/js/Bootstrap.min.js"></script> <!--Implementierung von Bootstrap-->
+
+		<script src="/static/js-calc/calc.js"></script> <!--Verweis auf meine Rechen-Datei (Javascript)-->
+
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> <!--Implementierung von JQuery-->
+		<script>
+		//Bei veränderung entfernt es vorherige activeclass und fügt es der aktuellen hinzu
+		//Funktioniert bei direkter URl Änderung nicht, Lösung nicht gefunden bisher
+		$(function(){
+			var $activeclass = $('a').click(function(){
+			$activeclass.removeClass('activeclass');
+			$(this).addClass('activeclass');
+			});
+		});
+		</script>
+
+		<nav class="navbar navbar-expand-md"> <!--Navigation Bar unter Verwendung von Bootstrap-->
+			<a href="/home" class="navbar-brand" data-link>
+				<img class="img-fluid" src="/static/pictures/logo.png" alt="Responsive image"> <!--Logo Implementierung in der navbar links-->
+			</a>
+			<div class="collapse navbar-collapse" id="main-navigation">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="/home" class="nav-link activeclass" data-link>Home</a> <!--rechte Seite navbar, hinzufügen von Home, bei onclick /home in url-->
+					</li>
+					<li class="nav-item">
+						<a href="/lernplan" class="nav-link" data-link>Lernplan</a> <!--rechte Seite navbar, hinzufügen von Lernplan, bei onclick /lernplan in url-->
+					</li>
+					<li class="nav-item">
+						<a href="/uebungen" class="nav-link" data-link>Übungen</a> <!--rechte Seite navbar, hinzufügen von Übungen, bei onclick /uebungen in url-->
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div id = "app"></div>
+		<script type="module" src="/static/js/index.js"></script>
+	</body>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<h6 class="text-uppercase font-weight-bold">Impressum</h6>
+					<p>Informationspflicht laut § 5 TMG.</p>
+					<p>UID-Nummer: DE969425<br>Wirtschafts-ID: DE847103852<br>Register: Handelsregister<br>Registernummer: HRB 030030<br>Registergericht: Registergericht Frankfurt</p>
+					<p>Aufsichtsbehörde:<br>Bezirkshauptmannschaft Frankfurt<br>Webseite der Aufsichtsbehörde: https://www.aufsichtsbeoerde-frankfurt.de/<br>Anschrift der Aufsichtsbehörde: Kaiserstraße 1, 40556 Frankfurt</p>
+					<p>Geschäftsführer: Andreas Graubner</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h6 class="text-uppercase font-weight-bold">Kontakt</h6>
+					<p>MyCalc<br>Oldenhauerplatz 5, Stiege 1 Tür 6<br>16789 Frankfurt<br>Deutschland<br><br>Tel.: 01694568348<br>Fax: 01694568348-1<br>E-Mail: Anfrage@MyCalc.de</p>
+				</div>
+			</div>
+		<div class="footer-copyright text-center">© 2020 Copyright: MyCalc.de</div>
+	</footer>
+</html>
